@@ -939,7 +939,7 @@ input[type='checkbox'] {
 .cards-2 {
 	padding-top: 6.625rem;	
 	padding-bottom: 1.25rem;	
-	background-color: #fbfbfb;
+	background-color: #153e52;
 }
 
 .cards-2 .section-title {
@@ -1619,12 +1619,12 @@ input[type='checkbox'] {
 .counter {
 	padding-top: 6.875rem;
 	padding-bottom: 5.25rem;
+	background-color: #153e52;
 }
 .qr {
 	float: right;       /* Mueve la imagen al lado derecho */
 	margin-left: 20px;  /* Añade un margen a la izquierda, opcional */
-  }
-  
+}
 .counter .image-container {
 	margin-bottom: 3rem;
 }
@@ -1685,6 +1685,35 @@ input[type='checkbox'] {
 /***********************/
 /*     16. Contact     */
 /***********************/
+
+/* Ajusta el tamaño de los campos de Adultos y Niños */
+#wa_adult, #wa_children {
+    width: justify; /* Ajusta el ancho al 48% para que ambos campos se alineen en una fila */
+    display: inline-block; /* Asegura que se muestren uno al lado del otro */
+    margin-right: 2%; /* Añade un pequeño espacio entre ellos */
+}
+
+/* Alinea las etiquetas y corrige posibles desajustes */
+#wa_adult + label, #wa_children + label {
+    display: flex;
+    margin-bottom: 5px;
+    font-size: 14px;
+    color: #ffffff; /* Opcional: Cambia el color o el estilo del texto */
+}
+
+.adult-children-container {
+    display: flex;
+    gap: 20px; /* Espacio entre los dos campos */
+}
+
+.adult-children-container div {
+    position: relative; /* Necesario para posicionar el label respecto al input */
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+
 .form-2 {
 	padding-top: 6.625rem;
 	padding-bottom: 5.625rem;

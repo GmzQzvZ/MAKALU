@@ -240,7 +240,7 @@
             <div class="row">
                 <div class="col-lg-12">
                     <div class="section-title">Servicios</div>
-                    <h2>Elija el paquete de servicios<br>Que se adapta a tus necesidades</h2>
+                    <h2 style="color: white;">Elija el paquete de servicios<br>Que se adapta a tus necesidades</h2>
                 </div> <!-- end of col -->
             </div> <!-- end of row -->
             <div class="row">
@@ -349,7 +349,7 @@
                     <!-- Card -->
                     <div class="card">
                         <div class="card-image">
-                            <img class="img-fluid" src="images/services-5.jpg" alt="alternative">
+                            <img class="img-fluid" src="images/tequendama.png" alt="alternative">
                         </div>
                         <div class="card-body">
                             <h3 class="card-title">Servicio</h3>
@@ -693,6 +693,7 @@
             <div class="row">
                 <div class="col-lg-6">
                     <div class="text-container">
+                        <h4 class="white">Formulario de contacto </>
                         <div class="section-title">CALL ME</div>
                         <h1 class="white">¡Tu próxima aventura empieza aquí! 🌍✈️</h1>
                         <p class="white"><b>¿Listo para descubrir el mundo?</b> <br>Con solo unos pasos, te ayudamos a planear el viaje de tus sueños. 
@@ -713,7 +714,8 @@
                                 <i class="fas fa-square"></i>
                                 <div class="media-body">Si prefieres, también puedes enviarnos un correo con tus dudas. ¡Estamos aquí para ayudarte!</div>
                             </li>
-                            <h3 class="white">🌴 ¡El mundo te espera, y nosotros te acompañamos en cada paso! 🌟</h2>
+                            <br>
+                            <h3 class="white">🌴 ¡El mundo te espera, y nosotros te acompañamos en cada paso! 🌟</h4>
                         </ul>
                     </div>
                 </div> <!-- end of col -->
@@ -721,60 +723,60 @@
                     <!-- Call Me Form -->
                     <form id="whatsapp-form" data-toggle="validator" data-focus="false">
                         <div class="form-group">
-                            <input type="text" class="form-control-input" id="#wa_name" name="#wa_name" required>
-                            <label class="label-control" for="#wa_name">Nombre</label>
+                            <input type="text" class="form-control-input" id="wa_name" name="wa_name" required>
+                            <label class="label-control" for="wa_name">Nombre</label>
                             <div class="help-block with-errors"></div>
                         </div>
                         <div class="form-group">
                             <input type="text" class="form-control-input" id="wa_number" name="wa_number" required>
-                            <label class="label-control" for="wa_number">Telefono</label>
+                            <label class="label-control" for="wa_number">Teléfono</label>
                             <div class="help-block with-errors"></div>
                         </div>
                         <div class="form-group">
-                            <input type="email" class="form-control-input" id="l#wa_email" name="#wa_email" required>
-                            <label class="label-control" for="#wa_email">Correo</label>
+                            <input type="email" class="form-control-input" id="wa_email" name="wa_email" required>
+                            <label class="label-control" for="wa_email">Correo</label>
                             <div class="help-block with-errors"></div>
                         </div>
-                        <div class="form-group">
-                            <input type="number" class="form-control-input" id="wa_adult" name="wa_adult" required>
-                            <label class="label-control" for="#wa_adult">Adultos</label>
-                            <div class="help-block with-errors"></div>
-                        </div>
-                        <div class="form-group">
-                            <input type="number" class="form-control-input" id="wa_children" name="wa_children" required>
-                            <label class="label-control" for="#wa_children">Niños</label>
-                            <div class="help-block with-errors"></div>
-                        </div>
-                        <div class="form-group">
-                            <textarea id='wa_textarea' class="form-control-input" placeholder='' maxlength='5000' row='1' required=""></textarea>
-                            <label class="label-control" for="#wa_email">Detalles de la Cotización</label>
-                            <div class="help-block with-errors"></div>
+                        <div class="form-group adult-children-container">
+                            <div>
+                                <input type="number" class="form-control-input" id="wa_adult" name="wa_adult" required>
+                                <label class="label-control" for="wa_adult">Adultos</label>
+                                <div class="help-block with-errors"></div>
                             </div>
+                            <div>
+                                <input type="number" class="form-control-input" id="wa_children" name="wa_children" required>
+                                <label class="label-control" for="wa_children">Niños</label>
+                                <div class="help-block with-errors"></div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <textarea id="wa_textarea" class="form-control-input" maxlength="5000" rows="5" required></textarea>
+                            <label class="label-control" for="wa_textarea">Detalles de la Cotización</label>
+                            <div class="help-block with-errors"></div>
+                        </div>
                         <div class="form-group">
                             <select class="form-control-select" id="wa_select" required>
                                 <option class="select-option" value="" disabled selected>Interesado en ...</option>
-                                <option class="select-option" value="Escursicones">Escursicones</option>
+                                <option class="select-option" value="Excursiones">Excursiones</option>
                                 <option class="select-option" value="Peregrinaciones">Peregrinaciones</option>
                                 <option class="select-option" value="Viajes">Viajes</option>
-                                <option class="select-option" value="bodas">Bodas</option>
-                                <option class="select-option" value="Viajes">Viajes</option>
-                                <option class="select-option" value="Viajes">Viajes</option>
+                                <option class="select-option" value="Bodas">Bodas</option>
                             </select>
                             <div class="help-block with-errors"></div>
                         </div>
                         <div class="form-group checkbox white">
-                            <input type="checkbox" id="lterms" value="Agreed-to-Terms" name="lterms" required>I agree
-                            with Aria's stated <a class="white" href="privacy-policy.html">Privacy Policy</a> and <a
-                                class="white" href="terms-conditions.html">Terms & Conditions</a>
+                            <input type="checkbox" id="lterms" value="Agreed-to-Terms" name="lterms" required>
+                            Acepto los <a class="white" href="privacy-policy.html">Términos de Privacidad</a> y las 
+                            <a class="white" href="terms-conditions.html">Condiciones Generales</a>
                             <div class="help-block with-errors"></div>
                         </div>
                         <div class="form-group">
-                            <button class="form-control-submit-button" href="javascript:void" type="submit" title="Send to Whatsapp">Send to Whatsapp</button>
+                            <button class="form-control-submit-button send_form" type="button">Enviar por Whatsapp</button>
                             <div id="text-info"></div>
-                            </form>
-                </div>
+                        </div>
+                    </form>
+                    
                     <!-- end of call me form -->
-
                 </div> <!-- end of col -->
             </div> <!-- end of row -->
         </div> <!-- end of container -->
@@ -1182,7 +1184,7 @@
                 <div class="col-lg-7 col-xl-6">
                     <div class="text-container">
                         <div class="section-title">ABOUT</div>
-                        <h2>We're Passionate About Delivering Growth Services</h2>
+                        <h2 style="color: white;">We're Passionate About Delivering Growth Services</h2>
                         <p>Our goal is to provide the right business growth services at the appropriate time so
                             companies can benefit from the created momentum and thrive for a long period of time</p>
                         <ul class="list-unstyled li-space-lg">
@@ -1352,7 +1354,7 @@
     <script src="js/morphext.min.js"></script> <!-- Morphtext rotating text in the header -->
     <script src="js/isotope.pkgd.min.js"></script> <!-- Isotope for filter -->
     <script src="js/validator.min.js"></script> <!-- Validator.js - Bootstrap plugin that validates forms -->
-    <script src="js/scripts.js"></script> Custom scripts
+    <script src="js/scripts.js"></script>
     <script src="js/whatsapp.js"></script>
 </body>
 </html>
