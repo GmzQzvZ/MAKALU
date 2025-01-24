@@ -1,9 +1,3 @@
-/* Template: Aria - Business HTML Landing Page Template
-   Author: Inovatik
-   Created: Jul 2019
-   Description: Master CSS file
-*/
-
 /*****************************************
 Table Of Contents:
 
@@ -28,6 +22,7 @@ Table Of Contents:
 19. Back To Top Button
 20. Extra Pages
 21. Media Queries
+22. testimonial  
 ******************************************/
 
 /*****************************************
@@ -2528,3 +2523,56 @@ a:hover.back-to-top {
 	/* end of navigation */
 }
 /* end of min-width width 1200px */
+
+/*************************/
+/*    22. testimonial    */
+/*************************/
+
+
+#surveyForm {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+#surveyForm label {
+    font-size: 14px;
+    font-weight: bold;
+    color: #333333;
+}
+
+#surveyForm input, 
+#surveyForm select, 
+#surveyForm textarea {
+    width: 100%;
+    padding: 10px;
+    font-size: 14px;
+    border: 1px solid #cccccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+#surveyForm textarea {
+    resize: vertical;
+    min-height: 100px;
+}
+
+#surveyForm button {
+    padding: 10px;
+    font-size: 16px;
+    font-weight: bold;
+    color: #ffffff;
+    background-color: #007bff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#surveyForm button:hover {
+    background-color: #0056b3;
+}

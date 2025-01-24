@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- SEO Meta Tags -->
+    <meta name="description"
+        content="Aria is a business focused HTML landing page template built with Bootstrap to help you create lead generation websites for companies and their services.">
+    <meta name="author" content="Inovatik">
+
+    <!-- OG Meta Tags to improve the way the post looks when you share the page on LinkedIn, Facebook, Google+ -->
+    <meta property="og:site_name" content="" /> <!-- website name -->
+    <meta property="og:site" content="" /> <!-- website link -->
+    <meta property="og:title" content="" /> <!-- title shown in the actual shared post -->
+    <meta property="og:description" content="" /> <!-- description shown in the actual shared post -->
+    <meta property="og:image" content="" /> <!-- image link, make sure it's jpg -->
+    <meta property="og:url" content="" /> <!-- where do you want your post to link to -->
+    <meta property="og:type" content="article" />
+
+    <!-- Website Title -->
+    <title>Makalu - Viajes y Eventos</title>
+
+    <!-- Styles -->
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:500,700&display=swap&subset=latin-ext" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,600&display=swap&subset=latin-ext" rel="stylesheet">
+    <link href="css/bootstrap.css" rel="stylesheet">
+    <link href="css/fontawesome-all.css" rel="stylesheet">
+    <link href="css/swiper.css" rel="stylesheet">
+    <link href="css/magnific-popup.css" rel="stylesheet">
+    <link href="css/styles.css" rel="stylesheet">
+
+    <!-- Favicon  -->
+    <link rel="icon" href="img/favicon.ico">
+</head>
+
+<body data-spy="scroll" data-target=".fixed-top">
+
+    <!-- Preloader -->
+    <div class="spinner-wrapper">
+        <div class="spinner">
+            <div class="bounce1"></div>
+            <div class="bounce2"></div>
+            <div class="bounce3"></div>
+        </div>
+    </div>
+    <!-- end of preloader -->
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-md navbar-dark navbar-custom fixed-top">
+        <!-- Text Logo - Use this if you don't have a graphic logo -->
+        <!-- <a class="navbar-brand logo-text page-scroll" href="index.html">Aria</a> -->
+
+        <!-- Image Logo -->
+        <a class="navbar-brand logo-image" href="index.html"><img class="logo" src="img/ms-icon-310x310.png" alt="alternative"></a>
+
+        <!-- Mobile Menu Toggle Button -->
+        <button class="navbar-toggler" type="button" img src="" data-toggle="collapse" data-target="#navbarsExampleDefault"
+            aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-awesome fas fa-bars"></span>
+            <span class="navbar-toggler-awesome fas fa-times"></span>
+        </button>
+
+        <!-- end of mobile menu toggle button -->
+
+        <div class="collapse navbar-collapse" id="navbarsExampleDefault" >
+            <ul class="navbar-nav ml-auto" >
+            </ul>
+            <span class="fa-stack" >
+                <a href="https://www.facebook.com/VIAJESYEVENTOSMAKALU/" target="_blank">
+                    <span class="hexagon" style="color: #153e52"></span>
+                    <i class="fab fa-facebook-f fa-stack-1x"></i>
+                </a>
+            </span>
+            <span class="fa-stack">
+                <a href="https://api.whatsapp.com/send?phone=573112584151&text=Hola!%20Estoy%20interesado%20en%20uno%20de%20sus%20planes%20de%20viaje%20y%20quisiera%20mas%20información%20😃😃😃" target="_blank">
+                    <span class="hexagon"></span>
+                    <i class='fab fa-whatsapp fa-stack-1x'></i>
+                </a>
+            </span>
+            <span class="fa-stack" target="_blank">
+                <a href="https://www.instagram.com/makaluvye/" target="_blank">
+                    <span class="hexagon"></span>
+                    <i class="fab fa-instagram fa-stack-1x"></i>
+                </a>
+            </span>
+            </span>
+        </div>
+    </nav> <!-- end of navbar -->
+    <!-- end of navbar -->
+</header> <!-- end of header -->
+<!-- end of header -->
+<div id="intro" class="basic-1">
+<br>
+    <body>
+        <div class="container">
+            <h1>Encuesta de Satisfacción</h1>
+            <p>En <b>Makalu Viajes y Eventos</b>, tu opinión es nuestra brújula hacia la excelencia. 
+                Queremos asegurarnos de que cada experiencia que vivas con nosotros supere tus expectativas. 
+                Por ello, hemos preparado esta breve encuesta de satisfacción. Tus respuestas nos ayudarán a mejorar nuestros servicios 
+                y a diseñar experiencias de viaje que realmente se adapten a tus necesidades y deseos.<br><br> ¡Gracias por tu tiempo y confianza!"</p>
+            
+            <form id="surveyForm">
+                <label for="name">Nombre:</label>
+                <input type="text" id="name" name="name" placeholder="Tu nombre" required>
+                
+                <label for="email">Correo Electrónico:</label>
+                <input type="email" id="email" name="email" placeholder="Tu correo electrónico" required>
+                
+                <label for="rating">Calificación de la experiencia (1-5):</label>
+                <select id="rating" name="rating" required>
+                    <option value="" disabled selected>Selecciona una opción</option>
+                    <option value="1">1 - Muy insatisfecho</option>
+                    <option value="2">2 - Insatisfecho</option>
+                    <option value="3">3 - Neutral</option>
+                    <option value="4">4 - Satisfecho</option>
+                    <option value="5">5 - Muy satisfecho</option>
+                </select>
+
+                <!-- Calidad del Servicio -->
+                <h2>Calidad del Servicio</h2>
+                <label for="serviceRating">¿Cómo calificarías la atención recibida por nuestro personal?</label>
+                <select id="serviceRating" name="serviceRating" required>
+                    <option value="" disabled selected>Selecciona una opción</option>
+                    <option value="excelente">Excelente</option>
+                    <option value="buena">Buena</option>
+                    <option value="regular">Regular</option>
+                    <option value="mala">Mala</option>
+                </select>
+
+                <label for="responseTime">¿El tiempo de respuesta a tus solicitudes fue adecuado?</label>
+                <select id="responseTime" name="responseTime" required>
+                    <option value="" disabled selected>Selecciona una opción</option>
+                    <option value="si">Sí</option>
+                    <option value="no">No</option>
+                </select>
+
+                <label for="communicationEase">¿Te resultó fácil comunicarte con nosotros?</label>
+                <select id="communicationEase" name="communicationEase" required>
+                    <option value="" disabled selected>Selecciona una opción</option>
+                    <option value="si">Sí</option>
+                    <option value="no">No</option>
+                </select>
+
+                <!-- Experiencia de Viaje -->
+                <h2>Experiencia de Viaje</h2>
+                <label for="packageExpectation">¿El paquete ofrecido cumplió con tus expectativas?</label>
+                <select id="packageExpectation" name="packageExpectation" required>
+                    <option value="" disabled selected>Selecciona una opción</option>
+                    <option value="si">Sí</option>
+                    <option value="no">No</option>
+                </select>
+
+                <label for="accommodationQuality">¿Cómo calificarías la calidad de los alojamientos incluidos en el paquete?</label>
+                <select id="accommodationQuality" name="accommodationQuality" required>
+                    <option value="" disabled selected>Selecciona una opción</option>
+                    <option value="excelente">Excelente</option>
+                    <option value="buena">Buena</option>
+                    <option value="regular">Regular</option>
+                    <option value="mala">Mala</option>
+                </select>
+
+                <label for="recommendation">¿Recomendarías este paquete de viaje a otras personas?</label>
+                <select id="recommendation" name="recommendation" required>
+                    <option value="" disabled selected>Selecciona una opción</option>
+                    <option value="si">Sí</option>
+                    <option value="no">No</option>
+                </select>
+
+                <!-- Relación Calidad-Precio -->
+                <h2>Relación Calidad-Precio</h2>
+                <label for="priceFairness">¿Sientes que el precio pagado por el paquete fue justo?</label>
+                <select id="priceFairness" name="priceFairness" required>
+                    <option value="" disabled selected>Selecciona una opción</option>
+                    <option value="si">Sí</option>
+                    <option value="no">No</option>
+                </select>
+
+                <label for="recontracting">¿Volverías a contratar un servicio con nuestra agencia de viajes?</label>
+                <select id="recontracting" name="recontracting" required>
+                    <option value="" disabled selected>Selecciona una opción</option>
+                    <option value="si">Sí</option>
+                    <option value="no">No</option>
+                </select>
+
+                <!-- Sugerencias y Mejoras -->
+                <h2>Sugerencias y Mejoras</h2>
+                <label for="improvementSuggestions">¿Qué aspecto del servicio crees que podríamos mejorar?</label>
+                <textarea id="improvementSuggestions" name="improvementSuggestions" placeholder="Escribe aquí tus sugerencias" required></textarea>
+
+                <label for="additionalServices">¿Qué servicios adicionales te gustaría que ofrezcamos?</label>
+                <textarea id="additionalServices" name="additionalServices" placeholder="Escribe aquí tus ideas" required></textarea>
+
+                <!-- Escala de Recomendación -->
+                <h2>Escala de Recomendación</h2>
+                <label for="recommendScale">¿Qué tan probable es que nos recomiendes a un amigo o familiar?</label>
+                <select id="recommendScale" name="recommendScale" required>
+                    <option value="" disabled selected>Selecciona una opción</option>
+                    <option value="1">1 (Nada probable)</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                    <option value="7">7</option>
+                    <option value="8">8</option>
+                    <option value="9">9</option>
+                    <option value="10">10 (Muy probable)</option>
+                </select>
+                
+                <label for="comments">Comentarios:</label>
+                <textarea id="comments" name="comments" placeholder="Escribe tus comentarios aquí..." required></textarea>
+                
+                <button type="button" style="background-color: #153e52;" id="sendButton">Enviar</button>
+            </form>
+        </div>
+    </body>
+</div>
+        <!-- Footer -->
+        <div class="footer">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="text-container about">
+                            <h4>Algunas palabras sobre Makalu</h4>
+                            <p class="white">Nos apasiona ofrecer los mejores servicios de crecimiento empresarial para
+                                empresas que recién comienzan como nuevas empresas o actores de la industria que han establecido su
+                                posición de mercado hace mucho tiempo.</p>
+                        </div> <!-- end of text-container -->
+                    </div> <!-- end of col -->
+                    <div class="col-md-2">
+                        <div class="text-container">
+                            <h4>Links</h4>
+                            <ul class="list-unstyled li-space-lg white">
+                                <li>
+                                    <a class="white" href="terms-conditions.html">Términos y condiciones</a>
+                                </li>
+                                <li>
+                                    <a class="white" href="privacy-policy.html">Política de privacidad</a>
+                                </li>
+                            </ul>
+                        </div> <!-- end of text-container -->
+                    </div> <!-- end of col -->
+                    <div class="col-md-2">
+                        <div class="text-container">
+                            <!-- <h4>Aliados:</h4>
+                            <ul class="list-unstyled li-space-lg">
+                                <li>
+                                    <a class="white" href="#your-link">businessgrowth.com</a>
+                                </li>
+                                <li>
+                                    <a class="white" href="#your-link">influencers.com</a>
+                                </li>
+                                <li class="media">
+                                    <a class="white" href="#your-link">optimizer.net</a>
+                                </li>
+                            </ul> -->
+                        </div> <!-- end of text-container -->
+                    </div> <!-- end of col -->
+                    <div class="col-md-2">
+                        <div class="text-container">
+                            <h4>Autorizados Por:</h4>
+                            <ul class="list-unstyled li-space-lg">
+                                <li>
+                                    <img class="spon2" src="images/colombiaPotencia-3.png"></img>
+                                </li>
+                            </ul>
+                        </div> <!-- end of text-container -->
+                    </div> <!-- end of col -->
+                </div> <!-- end of row -->
+            </div> <!-- end of container -->
+        </div> <!-- end of footer -->
+        <!-- end of footer -->
+
+    <!-- Copyright -->
+    <div class="copyright">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <p>Todos los derechos reservados © 2025
+                        <b>Makalu Viajes y Eventos</b>
+                </div> <!-- end of col -->
+            </div> <!-- enf of row -->
+        </div> <!-- end of container -->
+    </div> <!-- end of copyright -->
+    <!-- end of copyright -->
+
+
+    <!-- Scripts -->
+    <script src="js/jquery.min.js"></script> <!-- jQuery for Bootstrap's JavaScript plugins -->
+    <script src="js/popper.min.js"></script> <!-- Popper tooltip library for Bootstrap -->
+    <script src="js/bootstrap.min.js"></script> <!-- Bootstrap framework -->
+    <script src="js/jquery.easing.min.js"></script> <!-- jQuery Easing for smooth scrolling between anchors -->
+    <script src="js/swiper.min.js"></script> <!-- Swiper for image and text sliders -->
+    <script src="js/jquery.magnific-popup.js"></script> <!-- Magnific Popup for lightboxes -->
+    <script src="js/morphext.min.js"></script> <!-- Morphtext rotating text in the header -->
+    <script src="js/isotope.pkgd.min.js"></script> <!-- Isotope for filter -->
+    <script src="js/validator.min.js"></script> <!-- Validator.js - Bootstrap plugin that validates forms -->
+    <script src="js/scripts.js"></script>
+    <script src="js/whatsapp.js"></script>
+    <script src="js/testimonial.js"></script>
+</body>
+</html>
