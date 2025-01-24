@@ -1,70 +1,53 @@
-document.addEventListener('DOMContentLoaded', () => {
-    const form = document.getElementById('surveyForm');
+// Importar e inicializar Firebase
+import { initializeApp } from "https://www.gstatic.com/firebasejs/9.19.1/firebase-app.js";
+import { getDatabase, ref, push, set } from "https://www.gstatic.com/firebasejs/9.19.1/firebase-database.js";
 
-    form.addEventListener('submit', function (e) {
-        e.preventDefault(); // Detener el envío predeterminado
-        console.log("El evento submit se activó correctamente");
-        
-        // Recopilar datos del formulario
-        const serviceRating = document.getElementById('serviceRating').value;
-        const responseTime = document.getElementById('responseTime').value;
-        const communicationEase = document.getElementById('communicationEase').value;
+const firebaseConfig = {
+    apiKey: "USHod5NOkUTJv5vQ85UR",
+    authDomain: "makaluvye.firebaseapp.com",
+    databaseURL: "https://makaluvye.firebaseio.com",
+    projectId: "makaluvye",
+    storageBucket: "makaluvye.appspot.com",
+    messagingSenderId: "ID",
+    appId: "APP_ID"
+};
 
-        const packageExpectation = document.getElementById('packageExpectation').value;
-        const accommodationQuality = document.getElementById('accommodationQuality').value;
-        const recommendation = document.getElementById('recommendation').value;
+// Inicializar Firebase
+const app = initializeApp(firebaseConfig);
+const database = getDatabase(app);
 
-        const priceFairness = document.getElementById('priceFairness').value;
-        const recontracting = document.getElementById('recontracting').value;
 
-        const improvementSuggestions = document.getElementById('improvementSuggestions').value;
-        const additionalServices = document.getElementById('additionalServices').value;
+  // Referencia al botón de envío
+    const sendButton = document.getElementById("sendButton");
 
-        const recommendScale = document.getElementById('recommendScale').value;
+  // Agregar el evento al botón
+    sendButton.addEventListener("click", async () => {
+    // Recopilar los datos del formulario
+    const formData = {
+        name: document.getElementById("name").value,
+        email: document.getElementById("email").value,
+        rating: document.getElementById("rating").value,
+        serviceRating: document.getElementById("serviceRating").value,
+        responseTime: document.getElementById("responseTime").value,
+        communicationEase: document.getElementById("communicationEase").value,
+        packageExpectation: document.getElementById("packageExpectation").value,
+        accommodationQuality: document.getElementById("accommodationQuality").value,
+        recommendation: document.getElementById("recommendation").value,
+        priceFairness: document.getElementById("priceFairness").value,
+        recontracting: document.getElementById("recontracting").value,
+        improvementSuggestions: document.getElementById("improvementSuggestions").value,
+        additionalServices: document.getElementById("additionalServices").value,
+        recommendScale: document.getElementById("recommendScale").value,
+        comments: document.getElementById("comments").value,
+    };
 
-        // Crear el mensaje de WhatsApp
-        let message = `
-        Encuesta de Satisfacción:
-        - Calificación del servicio: ${serviceRating}
-        - Tiempo de respuesta adecuado: ${responseTime}
-        - Facilidad de comunicación: ${communicationEase}
-
-        - Cumplimiento de expectativas del paquete: ${packageExpectation}
-        - Calidad de alojamientos: ${accommodationQuality}
-        - Recomendación del paquete: ${recommendation}
-
-        - Precio justo: ${priceFairness}
-        - Volvería a contratar: ${recontracting}
-
-        - Sugerencias de mejora: ${improvementSuggestions}
-        - Servicios adicionales sugeridos: ${additionalServices}
-
-        - Probabilidad de recomendación: ${recommendScale}/10
-        `;
-
-        // Codificar mensaje para URL
-        const encodedMessage = encodeURIComponent(message);
-
-        // Número de WhatsApp (actualizado con el número proporcionado)
-        const phoneNumber = "573229520508"; // Número en formato internacional
-
-        // Redirigir a WhatsApp
-        window.open(`https://wa.me/${phoneNumber}?text=${encodedMessage}`, '_blank');
-    });
-});
-
-document.addEventListener('DOMContentLoaded', () => {
-    console.log("El DOM está listo");
-
-    const form = document.getElementById('surveyForm');
-    if (form) {
-        console.log("Formulario encontrado");
-
-        form.addEventListener('submit', function (e) {
-            e.preventDefault();
-            console.log("Evento submit activado");
-        });
-    } else {
-        console.error("Formulario no encontrado");
+    try {
+      // Guardar los datos en Firestore
+    await addDoc(collection(db, "surveys"), formData);
+    alert("¡Encuesta enviada con éxito! Gracias por tu participación.");
+      document.getElementById("surveyForm").reset(); // Limpiar el formulario
+    } catch (error) {
+    console.error("Error al guardar los datos:", error);
+    alert("Hubo un error al enviar la encuesta. Inténtalo nuevamente.");
     }
 });
