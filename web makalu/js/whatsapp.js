@@ -3,8 +3,8 @@ $(document).on('click', '.send_form', function () {
 
     /* Whatsapp Settings */
     var walink = 'https://web.whatsapp.com/send',
-        phone = '573229520608',
-        walink2 = 'Hola, mucho gusto. Mi nombre es:',
+        phone = '573112584151',
+        walink2 = 'Hola, mucho gusto.',
         text_yes = 'Enviado.',
         text_no = 'Complete todos los formularios y luego haga clic en Enviar.';
 
@@ -25,9 +25,9 @@ $(document).on('click', '.send_form', function () {
 
         /* Final Whatsapp URL */
         var blanter_whatsapp = walink + '?phone=' + phone + '&text=' + walink2 + '%0A%0A' +
-            '*Nombre* : ' + input_name1 + '%0A' +
+            '*estas hablando con* : ' + input_name1 + '%0A' +
             '*Correo Electrónico* : ' + input_email1 + '%0A' +
-            '*Opción Seleccionada* : ' + input_select1 + '%0A' +
+            '*estoy interesado en* : ' + input_select1 + '%0A' +
             '*Teléfono* : ' + input_number1 + '%0A' +
             '*Adultos* : ' + input_adult1 + '%0A' +
             '*Niños* : ' + input_children1 + '%0A' +
