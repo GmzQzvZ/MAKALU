@@ -1,4 +1,4 @@
-$(document).on('click', '.send_form', function () {
+$(document).on('click', '.send_form_travel', function () {
     var input_blanter = document.getElementById('wa_email');
 
     /* Whatsapp Settings */
@@ -40,3 +40,37 @@ $(document).on('click', '.send_form', function () {
         document.getElementById("text-info").innerHTML = '<span class="no">' + text_no + '</span>';
     }
 });
+
+$(document).on('click', '.send_form_data', function () {
+        var input_name1 = $("#pname").val(),
+            input_email1 = $("#pemail").val(),
+            input_select1 = $("#pselect").val();
+
+        var walink = 'https://web.whatsapp.com/send',
+            phone = '573229520608',  // El número de WhatsApp al que se enviará el mensaje
+            walink2 = 'Hola, mucho gusto. Te contacto desde el formulario sobre mis datos.',
+            text_yes = 'Enviado.',
+            text_no = 'Complete todos los formularios y luego haga clic en Enviar.';
+
+        if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
+            walink = 'whatsapp://send';
+        }
+
+        // Verificar si los campos no están vacíos
+        if (input_name1.trim() !== "" && input_email1.trim() !== "" && input_select1 !== "") {
+            // Generar el link para enviar por WhatsApp
+            var blanter_whatsapp = walink + '?phone=' + phone + '&text=' + walink2 + '%0A%0A' +
+                '*Nombre* : ' + input_name1 + '%0A' +
+                '*Correo Electrónico* : ' + input_email1 + '%0A' +
+                '*Selecciono* : ' + input_select1 + '%0A';
+
+            // Abrir la ventana de WhatsApp con los datos
+            window.open(blanter_whatsapp, '_blank');
+            document.getElementById("pmsgSubmit").innerHTML = '<span class="yes">' + text_yes + '</span>';
+            $("#pmsgSubmit").removeClass('hidden');
+        } else {
+            document.getElementById("pmsgSubmit").innerHTML = '<span class="no">' + text_no + '</span>';
+            $("#pmsgSubmit").removeClass('hidden');
+        }
+    });
+

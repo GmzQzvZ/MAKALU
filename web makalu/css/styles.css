@@ -654,7 +654,7 @@ input[type='checkbox'] {
 	padding: auto;
 	margin-bottom: -30px;
 	margin-top: -40px;
-	-webkit-backface-visibility: hidden;
+	/* -webkit-backface-visibility: hidden; */
 }
 
 .navbar-custom .navbar-brand.logo-text {
@@ -904,7 +904,7 @@ input[type='checkbox'] {
 	position: absolute;
 	width: 6rem;
 	height: 6rem;
-	background: url('../images/hexagon-blue.png') center center no-repeat;
+	background: url('../images/hexagon.png') center center no-repeat;
 	background-size: 6rem 6rem;
 }
 
@@ -1612,9 +1612,18 @@ input[type='checkbox'] {
 	background-color: #153e52;
 }
 .qr {
-	float: right;       /* Mueve la imagen al lado derecho */
-	margin-left: 20px;  /* Añade un margen a la izquierda, opcional */
+    float: right;
+    margin-left: 20px;
+    width: auto;  /* Mantén el tamaño original si no se especifica un tamaño fijo */
 }
+
+@media (max-width: 600px) {  /* Esto se aplicará a pantallas con un ancho máximo de 600px (teléfonos) */
+    .qr {
+        width: 50%;  /* Puedes ajustar este valor según el tamaño que desees */
+        height: auto;  /* Mantén la relación de aspecto */
+    }
+}
+
 .counter .image-container {
 	margin-bottom: 3rem;
 }
